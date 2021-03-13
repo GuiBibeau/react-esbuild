@@ -1,0 +1,26 @@
+{
+  "name": "react-ts-esbuild",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "build:watch": "nodemon ./scripts/build.js --watch src -e ts,tsx",
+    "serve:build": "serve ./build",
+    "dev": "npm-run-all --parallel build:watch serve:build"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "esbuild": "^0.9.2",
+    "fs-extra": "^9.1.0",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.7.0",
+    "rimraf": "^3.0.2",
+    "serve": "^11.3.2",
+    "watch": "^1.0.2"
+  }
+}
